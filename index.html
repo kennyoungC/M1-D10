@@ -213,6 +213,89 @@
     </footer>
     <script>
       console.log(`John <> Doe`);
+      const profile = {
+        name: `kenneth`,
+        surname: `obi`,
+        email: `example@gmail.com`,
+      };
+      delete profile.email;
+      const str = [
+        `bayo`,
+        `fummi`,
+        `kemi`,
+        `tayo`,
+        `bola`,
+        `shade`,
+        `bola`,
+        `ahmed`,
+        `yusuf`,
+        `tosin`,
+      ];
+      console.log(str);
+      let arr = [];
+      for (let i = 0; i < 100; i++) {
+        const random = Math.floor(Math.random() * 100);
+        arr.push(random);
+      }
+      console.log(arr);
+      const maxArr = function (arr) {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i];
+          }
+        }
+        return max;
+      };
+      console.log(arr);
+      console.log(maxArr(arr));
+      const minArr = function () {
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        return min;
+      };
+      console.log(minArr(arr));
+      let arr1 = [];
+      let arr2 = [];
+      for (i = 0; i < 10; i++) {
+        const random = Math.floor(Math.random() * 100);
+
+        arr1.push(random);
+        console.log(arr1);
+      }
+      for (let i = 0; i < 3; i++) {
+        arr2.push(arr1);
+        console.log(arr2);
+      }
+      const longestArr = function (arr1, arr2) {
+        if (arr1.length > arr2.length) {
+          return `this is the longest ${arr1}`;
+        } else {
+          return `this is the longest ${arr2}`;
+        }
+      };
+      const arraySum = function (arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += parseInt(arr[i]);
+        }
+        return sum;
+      };
+      console.log(arraySum([2, 5, 6, 7]));
+      const highestSumOfAnArray = function (arr1, arr2) {
+        if (arraySum(arr1) > arraySum(arr2)) {
+          return ` the first array is the highest with a sum of ${arraySum(
+            arr1
+          )}`;
+        } else {
+          `the second array is the highest with a sum of ${arraySum(arr2)}`;
+        }
+      };
+      console.log(highestSumOfAnArray([3, 4, 6, 4, 2], [4, 2, 5]));
     </script>
   </body>
 </html>
