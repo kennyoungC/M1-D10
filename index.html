@@ -120,6 +120,9 @@
         font-size: 48px;
         font-weight: bolder;
       }
+      .test {
+        background-color: aquamarine;
+      }
     </style>
     <title>benchmark</title>
   </head>
@@ -193,7 +196,7 @@
       </tbody>
     </table>
     <hr />
-    <div>
+    <div id="container">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt dolor
         distinctio ipsam laboriosam, quod dolore cupiditate explicabo, qui vel
@@ -296,6 +299,53 @@
         }
       };
       console.log(highestSumOfAnArray([3, 4, 6, 4, 2], [4, 2, 5]));
+
+      const container = document.getElementById(`container`);
+      const td = document.querySelectorAll(`td`);
+      for (let i = 0; i < td.length; i++) {
+        td[i].textContent = `newMe`;
+      }
+      console.log(td);
+      window.onload = function () {
+        console.log(`page loaded`);
+      };
+      document.querySelector(`.header`).textContent = `new header`;
+      const table = document.querySelector(`table`);
+      table.innerHTML += `<tr>
+          <td>005</td>
+          <td colspan="2">
+            kenneth
+            <a href="#"
+              ><img src="./random image.jpg" alt="a random photo" width="48px"
+            /></a>
+          </td>
+          <td>obi</td>
+          <td>vilnius</td>
+          <td>informatic</td>
+        </tr>`;
+      console.log(table);
+      const tr = document.querySelectorAll(`tr`);
+      for (let i = 0; i < tr.length; i++) {
+        tr[i].classList.add(`test`);
+      }
+      const ul = document.querySelector(`ul`);
+      ul.innerHTML += `<li>me</li>`;
+      console.log(ul);
+      const removeList = function () {
+        const UL = document.querySelectorAll(`ul`);
+        for (let i = 0; i < UL.length; i++) {
+          UL[i].remove();
+        }
+      };
+      removeList();
     </script>
   </body>
 </html>
+/* 31) Get element with ID "container" from the page 32) Get every "td" from the
+page 33) Create a cycle that prints the text inside every td of the page
+34)Write a function to change the heading of the page 35) Write a function to
+add an extra row to the table 36) Write a function to add the class "test" to
+each row in the table 37) Write a function to add a red background to every link
+in the page 38) Console log "Page loaded" when the page is correctly loaded
+39)Write a function to add new items to a UL 40) Write a function to empty a
+list */
